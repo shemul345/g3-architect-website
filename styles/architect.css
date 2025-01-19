@@ -8,13 +8,25 @@
   font-weight: 400;
   font-style: normal;
 }
-
+header{
+    padding-bottom: 45px;
+}
 /* shared section styles */
 .display_flex{
     display: flex;
 }
 .bg_primary{
     background-color: rgba(255, 144, 14, 0.1);
+}
+.section_title{
+    font-weight: 700;
+    font-size: 2.8125rem;
+    color: #131313;
+}
+.section_description{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #727272;
 }
 .btn_primary{
     font-size: 1.25rem;
@@ -25,6 +37,7 @@
     border-radius: 8px;
     border: none;
 }
+
 /* dark 01 */
 .text_black{
     color: #131313;
@@ -36,6 +49,10 @@
 /* dark 03 */
 .text_light_gray{
     color: #727272;
+}
+/* orange color */
+.orange_color{
+    color: #FF900E;
 }
 /* nav section styles */
 .navbar{
@@ -55,8 +72,8 @@
     font-size: 1.125rem;
     font-weight: 500;
 }
-.navbar,.banner{
-    max-width: 1140px;
+.navbar, .banner{
+    max-width: 1240px;
     margin: 0 auto;
 }
 /* banner related styles */
@@ -73,3 +90,82 @@
 .banner_image{
     width: 100%;
 }
+
+/* team feature related styles */
+.teams{
+    max-width: 1140px;
+    align-items: center;
+    margin: 85px auto;
+}
+.team_image_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our_features{
+    margin-left: 70px;
+}
+.quick_list{
+    font-family: "Work Sans", serif;
+    font-weight: 500;
+    font-size: 2.8125rem;
+}
+.of_our{
+    font-family: "Work Sans", serif;
+    font-weight: 700;
+    font-size: 2.8125rem;
+}
+.features{
+    font-family: "Work Sans", serif;
+    font-weight: 700;
+    font-size: 2.8125rem;
+}
+/* some facts related styles */
+.facts{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.facts_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 50px;
+}
+.facts_card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+}
+/* responsive small device related styles */
+@media screen and (max-width:576px) {
+    .navbar, 
+    .nav_links, 
+    .teams{
+        flex-direction: column;
+    }
+    .nav_item{
+        margin: 10px 0;
+    }
+    .team_image_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our_features{
+        margin-left: 20px;
+    }
+
+}
+
+/* responsive medium device related styles */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .team_image_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .teams{
+        flex-direction: column;
+    }
+}
+
+
